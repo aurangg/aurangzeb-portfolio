@@ -24,9 +24,7 @@ export default async function Banner() {
           <div className="col-lg-12">
             <div className="banner-box">
               <div className="banner-header">
-                <div className="banner-chip">
-                  Great Design 🤝 Greater Impact
-                </div>
+                <div className="banner-chip">Good Design 🤝 Greater Impact</div>
                 <h1 className="banner-title">{page.data.title}</h1>
                 <p className="banner-description">
                   {page.data.description[0]?.text}
