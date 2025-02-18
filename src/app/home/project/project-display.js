@@ -5,7 +5,7 @@ import ProjectBody from "./project-body";
 export default async function ProjectDisplay() {
   const client = createClient();
   const data = await client.getAllByType("projects");
-  console.log(data);
+  // console.log(data);
   return (
     <div className="row">
       {data.map((i, index) => (
