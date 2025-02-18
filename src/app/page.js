@@ -6,11 +6,10 @@ import ProjectsTile from "./home/projectsTile";
 export default function Home() {
   return (
     <div>
-      {/* <Banner />
+      <Banner />
       <ProjectsTile />
       <CalFunction />
-      <Footer /> */}
-      <h2>Hello</h2>
+      <Footer />
     </div>
   );
 }

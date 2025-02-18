@@ -4,7 +4,7 @@ import { createClient } from "@/prismicio";
 export default async function PhotosGallery() {
   const client = createClient();
   const imagesData = await client.getSingle("photos");
-  console.log(imagesData, "data");
+  // console.log(imagesData, "data");
   return (
     <div style={{ paddingTop: "100px" }}>
       <div className="container">
