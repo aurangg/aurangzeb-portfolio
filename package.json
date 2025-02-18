@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "slicemachine": "start-slicemachine"
+    "slicemachine": "start-slicemachine", 
+    "export" : "next build && next export -o _static"
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.2",
