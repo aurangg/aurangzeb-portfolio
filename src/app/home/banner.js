@@ -2,14 +2,15 @@ import Image from "next/image";
 import { createClient } from "@/prismicio";
 import Link from "next/link";
 import LinkButton from "../components/link-button";
-import { contact_page } from "@/constants/urls";
+import { contact_page, website } from "@/constants/urls";
 
 export default async function Banner() {
   const client = createClient();
   const page = await client.getSingle("homepage");
-  console.log(page);
+  //console.log(page);
+
   return (
-    <div style={{ paddingTop: "200px" }}>
+    <section className="section-first">
       <div className="container banner-position-relative">
         <div className="banner-top-line"></div>
         <div className="banner-left-line"></div>
@@ -43,6 +44,7 @@ export default async function Banner() {
                   width={454}
                   height={454}
                   alt={page.data.display.alt}
+                  priority
                 />
                 <div className="experience-tag">6 years experience</div>
               </div>
@@ -58,6 +60,6 @@ export default async function Banner() {
           height={38}
           priority
         /> */}
-    </div>
+    </section>
   );
 }

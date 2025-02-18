@@ -233,7 +233,7 @@ p {
   flex-direction: column;
 }
 .thumb-title {
-  color: #141414;
+  color: var(--blue900);
   font-family: "Albert Sans";
   font-size: 32px;
   font-style: normal;
@@ -242,7 +242,7 @@ p {
   letter-spacing: -1.28px;
 }
 .thumb-description {
-  color: #141414;
+  color: var(--blue900);
   font-family: "Albert Sans";
   font-size: 16px;
   font-style: normal;
@@ -555,7 +555,7 @@ p {
   flex-direction: row;
   align-items: center;
 }
-.flex-end {
+.footer-icons-end {
   display: flex;
   justify-content: flex-end;
 }
@@ -616,4 +616,113 @@ p {
   border-radius: 40px;
   background: #d6def2;
   padding: 64px 0px 40px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.section-first {
+  padding-top: 200px;
+}
+.section-second {
+  padding-top: 150px;
+}
+
+@media (max-width: 450px) {
+  .section-first {
+    padding-top: 120px;
+  }
+  .section-second {
+    padding-top: 64px;
+  }
+  .section-padding {
+    padding-bottom: 24px;
+  }
+  .banner-box {
+    flex-direction: column-reverse;
+    padding: 24px;
+  }
+  .display-container {
+    margin-bottom: 40px;
+  }
+  .banner-title {
+    font-size: 44px;
+  }
+  .project-image-container {
+    height: auto;
+    padding: 24px;
+  }
+  .thumb-img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: unset;
+    left: unset;
+  }
+  .project-header {
+    margin-top: 24px;
+  }
+  .thumb-title {
+    font-size: 24px;
+  }
+  .project-footer {
+    margin-top: 40px;
+  }
+  .section-padding-main {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .section-heading {
+    font-size: 32px;
+  }
+  .cal-inline-container {
+    width: 90% !important;
+  }
+  .footer-icons-end {
+    justify-content: center;
+  }
+  .footer-bottom {
+    margin-top: 24px;
+  }
+  .footer-head {
+    align-items: center;
+  }
+  .navbar-container {
+    padding: 12px;
+  }
+  .banner-top-line::after {
+    top: -16px;
+  }
+  .banner-left-line::after {
+    left: 7px;
+    top: -16px;
+    height: calc(100% + 32px);
+  }
+  .banner-right-line::after {
+    top: -16px;
+    right: 7px;
+    height: calc(100% + 32px);
+  }
+  .banner-bottom-line::after {
+    left: 0px;
+    bottom: -16px;
+  }
+  .dot-top-left::after {
+    left: 4px;
+    top: -19px;
+  }
+  .dot-top-right::after {
+    right: 4px;
+    top: -19px;
+  }
+  .dot-bottom-left::after {
+    left: 4px;
+    bottom: -19px;
+  }
+  .dot-bottom-right::after {
+    right: 4px;
+    bottom: -19px;
+  }
+  .navbar {
+    top: 16px;
+  }
 }

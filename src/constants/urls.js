@@ -6,7 +6,7 @@ const photos_page = "photos";
 const twitter = "https://x.com/auraaaaang";
 const linkedin = "https://www.linkedin.com/in/aurangzeb-khan/";
 const email = "aurangzebbbk@gmail.com";
-
+const website = "https://aurangg.com";
 export {
   projects_page,
   contact_page,
@@ -16,4 +16,5 @@ export {
   twitter,
   linkedin,
   email,
+  website,
 };

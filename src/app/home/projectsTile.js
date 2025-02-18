@@ -3,7 +3,7 @@ import ProjectDisplay from "./project/project-display";
 
 export default async function ProjectsTile() {
   return (
-    <div style={{ paddingTop: "150px" }}>
+    <section className="section-second">
       <div className="container">
         <div className="row" style={{ alignItems: "center" }}>
           <div className="col-lg-12 section-padding">
@@ -13,6 +13,6 @@ export default async function ProjectsTile() {
         </div>
         <ProjectDisplay />
       </div>
-    </div>
+    </section>
   );
 }

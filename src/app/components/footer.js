@@ -81,7 +81,7 @@ export default function Footer() {
               </p>
             </div>
           </div>
-          <div className="col-lg-6 flex-end">
+          <div className="col-lg-6 footer-icons-end">
             <div className="footer-bottom">
               <a href={`${twitter}`} target="_blank" className="tool-tip">
                 <div className="tool-tip-after">X</div>
