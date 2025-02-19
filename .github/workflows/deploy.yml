@@ -17,27 +17,25 @@ jobs:
         run: npm install
 
       - name: Build and Export Next.js
-        run: npm run export
+        run: npm run export # Uses the export script from package.json
 
-      - name: Push to Build Branch
+      - name: Push to Build Branch (Keep Previous Builds)
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
 
-          # Ensure we are on main and fetch latest changes
-          git checkout main
-          git pull origin main
+          # Fetch the latest build-branch (if exists)
+          git fetch origin build-branch || true
+          git checkout build-branch || git checkout -b build-branch
 
-          # Create or switch to the build-branch
-          git branch -D build-branch || true
-          git checkout --orphan build-branch
+          # Remove old build files while keeping Git history
+          git rm -rf . 
 
-          # Remove all files except the `out/` folder
-          git rm -rf .
+          # Move new build files from "out" folder
           mv out/* .
           rm -rf out .github node_modules package-lock.json
 
-          # Commit and push changes
+          # Commit and push changes while keeping history
           git add .
-          git commit -m "Deploy static build from main"
-          git push --force origin build-branch
+          git commit -m "Deploy static build from main [$(date)]"
+          git push origin build-branch
