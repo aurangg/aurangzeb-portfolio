@@ -3,7 +3,7 @@ name: Build and Deploy to Build Branch
 on:
   push:
     branches:
-      - main-branch # Triggers when pushing to main-branch
+      - main # Runs when pushing to main
 
 jobs:
   build:
@@ -23,10 +23,21 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
+
+          # Ensure we are on main and fetch latest changes
+          git checkout main
+          git pull origin main
+
+          # Create or switch to the build-branch
+          git branch -D build-branch || true
           git checkout --orphan build-branch
+
+          # Remove all files except the `out/` folder
           git rm -rf .
           mv out/* .
-          rm -rf out .github node_modules
+          rm -rf out .github node_modules package-lock.json
+
+          # Commit and push changes
           git add .
-          git commit -m "Deploy static build from main-branch"
+          git commit -m "Deploy static build from main"
           git push --force origin build-branch
