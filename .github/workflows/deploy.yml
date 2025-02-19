@@ -28,7 +28,7 @@ jobs:
           git fetch origin build-branch || true
           git checkout build-branch || git checkout -b build-branch
 
-          # Remove old build files while keeping Git history
+
           git rm -rf . 
 
           # Move new build files from "out" folder
