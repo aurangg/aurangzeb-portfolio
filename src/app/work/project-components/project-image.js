@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default async function ProjectImage({ i }) {
+export default function ProjectImage({ i }) {
   return (
     <div className="col-lg-6">
       <div

@@ -1,4 +1,6 @@
 import { email, linkedin, twitter } from "@/constants/urls";
+import BasicDot from "./BasicDot";
+import Padding from "./Padding";
 
 export default function Footer() {
   return (
@@ -30,7 +32,8 @@ export default function Footer() {
           </defs>
         </svg>
       </div>
-      <div className="container">
+      <div className="container position-relatve border-lr">
+        <Padding spacing={40} />
         <div className="row">
           <div className="col-lg-6">
             <div className="footer-head">
@@ -143,6 +146,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        <div className="padding-bottom-120"></div>
       </div>
     </footer>
   );

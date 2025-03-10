@@ -36,19 +36,19 @@
           "multi": "paragraph"
         }
       },
-      "categories": {
+      "industry": {
         "type": "StructuredText",
         "config": {
-          "label": "category",
+          "label": "industry",
           "placeholder": "",
           "allowTargetBlank": true,
           "multi": "list-item"
         }
       },
-      "tags": {
+      "scope": {
         "type": "StructuredText",
         "config": {
-          "label": "tags",
+          "label": "scope",
           "placeholder": "",
           "allowTargetBlank": true,
           "multi": "list-item"
@@ -76,6 +76,37 @@
         "config": {
           "label": "Image Shadow",
           "placeholder": ""
+        }
+      },
+      "client_name": {
+        "type": "Text",
+        "config": {
+          "label": "client name",
+          "placeholder": ""
+        }
+      },
+      "year": {
+        "type": "Text",
+        "config": {
+          "label": "year",
+          "placeholder": ""
+        }
+      },
+      "project_images": {
+        "type": "Group",
+        "config": {
+          "label": "project images",
+          "repeat": true,
+          "fields": {
+            "project_gallery": {
+              "type": "Image",
+              "config": {
+                "label": "project gallery",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
         }
       },
       "slices": {

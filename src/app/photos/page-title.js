@@ -1,4 +1,4 @@
-export default async function PageTitle() {
+export default function PageTitle() {
   return (
     <div style={{ paddingTop: "200px" }}>
       <div className="container">

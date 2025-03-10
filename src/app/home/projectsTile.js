@@ -1,18 +1,20 @@
-import Image from "next/image";
-import ProjectDisplay from "./project/project-display";
+// import SectionHeading from "../components/section_heading";
+// import ProjectListing from "../work/project-components/project-listing";
 
-export default async function ProjectsTile() {
-  return (
-    <section className="section-second">
-      <div className="container">
-        <div className="row" style={{ alignItems: "center" }}>
-          <div className="col-lg-12 section-padding">
-            <p className="section-subheading">How I have helped others</p>
-            <h2 className="section-heading">Selected Work</h2>
-          </div>
-        </div>
-        <ProjectDisplay />
-      </div>
-    </section>
-  );
-}
+// export default function ProjectsTile({ data }) {
+//   return (
+//     <section className="section-second">
+//       <SectionHeading
+//         subheading="How I have helped others"
+//         heading="Selected Work"
+//       />
+//       <div className="container">
+//         <div className="row">
+//           {data.map((i, index) => (
+//             <ProjectListing i={i} index={index} />
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
