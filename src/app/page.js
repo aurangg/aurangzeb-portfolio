@@ -1,9 +1,31 @@
 import HomePage from "./home/page";
+import { createClient } from "@/prismicio";
 
-export default function Home() {
+export async function generateMetadata({ homepage }) {
+  return {
+    title:
+      homepage?.data.meta_title ||
+      "Sr. UI/UX Designer - Landing Pages | Dashboards | SaaS | Websites | Mobile",
+    description:
+      homepage?.data.meta_description || "Default description for SEO.",
+    openGraph: {
+      title: homepage?.data.meta_title,
+      description: homepage?.data.meta_description,
+
+      openGraph: {
+        images: [{ url: homepage?.data.meta_image?.url }],
+      },
+    },
+  };
+}
+
+export default async function Home() {
+  const client = createClient();
+  const homepage = await client.getSingle("homepage");
+  generateMetadata(homepage);
   return (
     <>
-      <HomePage />
+      <HomePage homepage={homepage} />
     </>
   );
 }

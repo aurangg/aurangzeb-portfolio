@@ -1,10 +1,6 @@
 import Image from "next/image";
-import { createClient } from "@/prismicio";
 
-export default async function PhotosGallery() {
-  const client = createClient();
-  const imagesData = await client.getSingle("photos");
-
+export default function PhotosGallery({ imagesData }) {
   return (
     <div style={{ paddingTop: "100px" }}>
       <div className="container">

@@ -8,13 +8,16 @@ export default function ProjectDetailImage({
   shadow,
   url,
   alt,
+  slug,
 }) {
   let formatAlt = alt?.replace(/\s+/g, "_");
   // \s+: This regular expression matches one or more spaces.
   // .replace(/\s+/g, '_'): It replaces all spaces with an underscore (_).
   return (
     <div className="row">
-      <div className="col-lg-10 offset-lg-1">
+      <div
+        className={`${slug === "myne" ? "col-lg-12" : "col-lg-10 offset-lg-1"}`}
+      >
         <div className="project-gallery">
           <div
             style={{

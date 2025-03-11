@@ -3,6 +3,7 @@ import "./bootstrap-grid.css";
 import Toolbar from "./components/toolbar";
 import NavbarTest from "./components/toolbarTry";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 // export const metadata = {
 //   title: "Create Next App",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         {children}
         <SpeedInsights />
       </body>
+      <GoogleAnalytics gaID="G-Z4SX9XDB1T" />
     </html>
   );
 }

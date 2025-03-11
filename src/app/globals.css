@@ -45,6 +45,30 @@ p {
 .position-relative {
   position: relative;
 }
+.loading-screen {
+  background-color: var(--background);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 101;
+}
+.loading-box {
+  border-radius: 24px;
+  border: 1px solid #d0dbe7;
+  background: var(--white);
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+.loading-avatar {
+  height: auto;
+}
 .banner-box {
   border-radius: 40px;
   border: 1px solid var(--base-border);
@@ -70,6 +94,9 @@ p {
 }
 .padding-100 {
   padding: 50px 0px;
+}
+.padding-80 {
+  padding: 40px 0px;
 }
 .padding-60 {
   padding: 30px 0px;
@@ -1036,9 +1063,9 @@ Project Dots */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
+  padding: 2px;
   height: auto;
-  border-radius: 28px;
+  border-radius: 24px;
 }
 .project-img-caption {
   color: var(--blue900);
@@ -1066,7 +1093,6 @@ Project Dots */
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  padding: 80px 0px;
   background-color: var(--white);
 }
 .text-block-section {
@@ -1236,6 +1262,140 @@ CSS Attempt
   width: 100%;
   height: auto;
 }
+.input-field {
+  border-radius: 5px;
+  border: 1px solid #e6e6ef;
+  background-color: var(--white);
+  padding: 10px 12px;
+  color: var(--blue900);
+  font-feature-settings:
+    "liga" off,
+    "calt" off;
+  font-family: "Albert Sans", serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 133.333% */
+  letter-spacing: -0.06px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.input-form-disabled {
+  background: #f0f2f7;
+}
+.input-form {
+  border-radius: 40px;
+  border: 1px solid var(--base-border);
+  background: var(--white);
+  padding: 40px;
+  transition: 0.3s;
+}
+.form-height {
+  min-height: 25vh;
+}
+.inquiry-done {
+  font-family: "Albert Sans", serif !important;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: none;
+}
+.review-box {
+  max-width: 450px;
+  padding: 24px;
+  transform: rotate(-1.5deg);
+}
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.review-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.review-name {
+  color: var(--blue900);
+  font-family: "Albert Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.8px;
+  text-align: left;
+}
+.flex-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.review-post {
+  color: var(--blue900);
+  font-family: "Albert Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.48px;
+  opacity: 0.6;
+  text-align: left;
+}
+.review-body {
+  margin-top: 16px;
+}
+.review-text {
+  color: var(--blue900);
+  font-family: "Albert Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+.send-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+.contact-heading {
+  margin-bottom: 32px;
+}
+.create-new-inquiry {
+  display: flex;
+  padding: 8px 0px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #4e6cb9;
+  text-decoration: underline;
+  text-align: center;
+  font-family: "Albert Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 128.571% */
+  letter-spacing: -0.84px;
+  cursor: pointer;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 @media (max-width: 786px) {
   .navbar {
@@ -1275,6 +1435,9 @@ CSS Attempt
 }
 
 @media (max-width: 450px) {
+  .form-height {
+    min-height: auto;
+  }
   .section-first {
     padding: 32px 0px;
   }

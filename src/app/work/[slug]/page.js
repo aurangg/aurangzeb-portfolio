@@ -29,7 +29,7 @@ export default async function ProjectsDetail({ params }) {
       <Padding spacing={40} border={true} />
       <Banner project={project} />
       <Padding spacing={40} border={true} />
-      <Middle project={project} />
+      <Middle project={project} slug={slug} />
       {/* <Suspense fallback={<p>Loading...</p>}>
       </Suspense> */}
       {/* <CalFunction /> */}

@@ -4,17 +4,21 @@ import SectionHeading from "../components/section_heading";
 import { Suspense } from "react";
 import ProjectSkeleton from "../components/project-skeleton";
 import VerticalLines from "../components/VerticalLines";
+import Padding from "../components/Padding";
 
 export default async function ProjectsComponent() {
   const client = createClient();
   const data = await client.getAllByType("projects");
   return (
     <>
+      <Padding spacing={60} border={true} />
       <section className="position-relative">
-        <SectionHeading
-          subheading="How I have helped others"
-          heading="Selected Work"
-        />
+        <div className="container border-lr">
+          <SectionHeading
+            subheading="How I have helped others"
+            heading="Selected Work"
+          />
+        </div>
         {/* border-lr section-sm-padding  */}
         <div className="container border-lr section-sm-padding">
           {/* <VerticalLines topLine={true} bottomLine={false} /> */}

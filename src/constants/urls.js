@@ -9,6 +9,8 @@ const email = "aurangzebbbk@gmail.com";
 const website = "https://aurangg.com";
 const home_page_url = "";
 const resume_page = "resume";
+const apikey = "100573f2-0285-41f5-bf33-ccadd0d701c6";
+const formURL = "https://api.web3forms.com/submit";
 export {
   projects_page,
   contact_page,
@@ -21,4 +23,6 @@ export {
   website,
   home_page_url,
   resume_page,
+  apikey,
+  formURL,
 };

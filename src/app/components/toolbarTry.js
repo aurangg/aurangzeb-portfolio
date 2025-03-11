@@ -111,7 +111,7 @@ export default function NavbarTest() {
             </motion.span>
           </Link>
         ))}
-        <Link href={`/${photos_page}`} className={`project-btn navbar-btn`}>
+        <Link href={`/${contact_page}`} className={`project-btn navbar-btn`}>
           Get in touch
         </Link>
       </div>
