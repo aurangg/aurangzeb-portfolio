@@ -2,6 +2,7 @@ import "./globals.css";
 import "./bootstrap-grid.css";
 import Toolbar from "./components/toolbar";
 import NavbarTest from "./components/toolbarTry";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // export const metadata = {
 //   title: "Create Next App",
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
         {/* <Toolbar /> */}
         <NavbarTest />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
