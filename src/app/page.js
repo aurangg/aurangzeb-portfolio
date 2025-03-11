@@ -1,5 +1,5 @@
-import HomePage from "./home/page";
 import { createClient } from "@/prismicio";
+import HomePage from "./home/page";
 
 export async function generateMetadata({ homepage }) {
   return {
