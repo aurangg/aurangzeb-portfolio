@@ -8,7 +8,11 @@ import Padding from "../components/Padding";
 
 export default async function ProjectsComponent() {
   const client = createClient();
-  const data = await client.getAllByType("projects");
+  const data = await client.getAllByType("projects").catch(() => ());
+  if (!data) {
+    console.error("No homepage document found in Prismic.");
+    return { notFound: true }; // This prevents build failure
+  }
   return (
     <>
       <Padding spacing={60} border={true} />

@@ -8,8 +8,11 @@ import Padding from "@/app/components/Padding";
 
 export async function generateStaticParams() {
   const client = createClient();
-  const projects = await client.getAllByType("projects");
-
+  const projects = await client.getAllByType("projects").catch(() => null);
+  if (!projects) {
+    console.error("No homepage document found in Prismic.");
+    return { notFound: true }; // This prevents build failure
+  }
   return projects.map((project) => ({
     slug: project.uid, // ✅ Must match the dynamic [slug]
   }));
@@ -18,10 +21,10 @@ export async function generateStaticParams() {
 export default async function ProjectsDetail({ params }) {
   const client = createClient();
   const { slug } = await params;
-  const project = await client.getByUID("projects", slug);
-  console.log(project);
+  const project = await client.getByUID("projects", slug).catch(() => null);
   if (!project) {
-    <p>Loading...</p>;
+    console.error("No homepage document found in Prismic.");
+    return { notFound: true }; // This prevents build failure
   }
 
   return (

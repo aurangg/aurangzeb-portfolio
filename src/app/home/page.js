@@ -21,8 +21,12 @@ export async function generateMetadata({ homepage }) {
 
 export default async function HomePage() {
   const client = createClient();
-  const homepage = await client.getSingle("homepage");
+  const homepage = await client.getSingle("homepage").catch(() => null);
   generateMetadata(homepage);
+  if (!homepage) {
+    console.error("No homepage document found in Prismic.");
+    return { notFound: true }; // This prevents build failure
+  }
   return (
     <main className="position-relative">
       <Padding spacing={40} border={true} />

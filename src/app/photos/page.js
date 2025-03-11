@@ -32,8 +32,12 @@ A designer’s perspective isn’t limited to screens—it’s everywhere. Explo
 
 export default async function PhotosMain() {
   const client = createClient();
-  const imagesData = await client.getSingle("photos");
+  const imagesData = await client.getSingle("photos").catch(() => null);
   generateMetadata(imagesData);
+  if (!imagesData) {
+    console.error("No homepage document found in Prismic.");
+    return { notFound: true }; // This prevents build failure
+  }
   return (
     <>
       <PageTitle />
