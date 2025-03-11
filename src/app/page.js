@@ -12,9 +12,9 @@ export async function generateMetadata({ homepage }) {
       title: homepage?.data.meta_title,
       description: homepage?.data.meta_description,
 
-      openGraph: {
-        images: [{ url: homepage?.data.meta_image?.url }],
-      },
+      // openGraph: {
+      //   images: [{ url: homepage?.data.meta_image?.url }],
+      // },
     },
   };
 }
@@ -23,6 +23,7 @@ export default async function Home() {
   const client = createClient();
   const homepage = await client.getSingle("homepage");
   generateMetadata(homepage);
+  console.log(homepage);
   return (
     <>
       <HomePage homepage={homepage} />
