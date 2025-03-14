@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"); */
 :root {
   --background: #f5f8ff;
   --blue900: #011438;
@@ -34,7 +34,7 @@ a {
 
 h6,
 p {
-  font-family: "Albert Sans", serif;
+  font-family: var(--font-albert-sans), serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings: "wdth" 100;
@@ -424,7 +424,7 @@ Project Dots */
 .banner-chip {
   color: var(--blue900);
   text-align: center;
-  font-family: "Albert Sans";
+  font-family: var(--font-albert-sans), serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -443,7 +443,7 @@ Project Dots */
 }
 .banner-title {
   color: var(--Blue-900, #011438);
-  font-family: "Albert Sans";
+  font-family: var(--font-albert-sans), serif;
   font-size: 56px;
   font-style: normal;
   font-weight: 600;
@@ -453,7 +453,7 @@ Project Dots */
 }
 .banner-description {
   color: var(--Blue-900, #011438);
-  font-family: "JetBrains Mono";
+  font-family: var(--font-jetbrains-mono);
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
@@ -466,30 +466,6 @@ Project Dots */
 .display-picture {
   height: 100%;
   width: 220px;
-}
-.btn-contact-me {
-  -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.15);
-  background-color: var(--background);
-  text-align: center;
-  padding: 12px 24px;
-  color: var(--blue900);
-  font-family: "Bricolage Grotesque", serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: -0.5px;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  width: max-content;
-  margin-top: 64px;
-  border: 1px solid var(--stroke1);
-  border-radius: 4px;
-  transition: 0.3s;
-}
-.btn-contact-me:hover {
-  gap: 16px;
 }
 .img-col,
 .text-col {
@@ -521,7 +497,7 @@ Project Dots */
 }
 .thumb-title {
   color: var(--blue900);
-  font-family: "Albert Sans";
+  font-family: var(--font-albert-sans), serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
@@ -531,7 +507,7 @@ Project Dots */
 }
 .thumb-description {
   color: var(--blue900);
-  font-family: "Albert Sans";
+  font-family: var(--font-albert-sans), serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -603,7 +579,7 @@ Project Dots */
 }
 .chip-text {
   color: var(--blue900);
-  font-family: "JetBrains Mono";
+  font-family: var(--font-jetbrains-mono);
   font-size: 12px;
   font-style: normal;
   font-weight: 200;
@@ -620,7 +596,7 @@ Project Dots */
   background: linear-gradient(0deg, #141414 0%, #5a5a5a 100%);
   box-shadow: 0px 0px 9px 0px rgba(199, 199, 199, 0.15);
   color: var(--White, #fff);
-  font-family: "JetBrains Mono";
+  font-family: var(--font-jetbrains-mono);
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -648,7 +624,7 @@ Project Dots */
 }
 .project-tags {
   color: var(--blue900);
-  font-family: "JetBrains Mono";
+  font-family: var(--font-jetbrains-mono);
   font-size: 12px;
   font-style: normal;
   font-weight: 200;
@@ -679,7 +655,7 @@ Project Dots */
 .section-subheading {
   color: var(--blue900);
   text-align: center;
-  font-family: "JetBrains Mono";
+  font-family: var(--font-jetbrains-mono);
   font-size: 16px;
   font-style: normal;
   font-weight: 200;
@@ -692,7 +668,7 @@ Project Dots */
 .section-heading {
   color: var(--blue900);
   text-align: center;
-  font-family: "Albert Sans";
+  font-family: var(--font-albert-sans), serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -711,7 +687,7 @@ Project Dots */
   background: #f40;
   padding: 8px 12px;
   color: var(--white);
-  font-family: "JetBrains Mono";
+  font-family: var(--font-jetbrains-mono);
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -773,7 +749,7 @@ Project Dots */
 .nav-items-text {
   color: var(--blue900);
   text-align: center;
-  font-family: "Albert Sans";
+  font-family: var(--font-albert-sans), serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -836,7 +812,7 @@ Project Dots */
 }
 .picture-caption {
   color: var(--blue900);
-  font-family: "JetBrains Mono";
+  font-family: var(--font-jetbrains-mono);
   font-size: 14px;
   font-style: normal;
   font-weight: 200;
@@ -848,7 +824,7 @@ Project Dots */
 .album-heading {
   color: var(--blue900);
   text-align: left;
-  font-family: "Albert Sans";
+  font-family: var(--font-albert-sans), serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
@@ -875,7 +851,7 @@ Project Dots */
 }
 .footer-head-text {
   color: var(--blue900);
-  font-family: "Albert Sans";
+  font-family: var(--font-albert-sans), serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -902,7 +878,7 @@ Project Dots */
   border-radius: 2px;
   padding: 4px 6px;
   color: var(--blue900);
-  font-family: "JetBrains Mono";
+  font-family: var(--font-jetbrains-mono);
   font-size: 12px;
   font-style: normal;
   font-weight: 200;
@@ -931,7 +907,7 @@ Project Dots */
   right: 33%;
   top: -23px;
   color: var(--white);
-  font-family: "JetBrains Mono";
+  font-family: var(--font-jetbrains-mono);
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -1006,7 +982,7 @@ Project Dots */
 }
 .data-title {
   color: var(--blue900);
-  font-family: "JetBrains Mono";
+  font-family: var(--font-jetbrains-mono);
   font-size: 12px;
   font-style: normal;
   font-weight: 200;
@@ -1020,7 +996,7 @@ Project Dots */
 }
 .data-info {
   color: var(--blue900);
-  font-family: "Albert Sans";
+  font-family: var(--font-albert-sans), serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -1069,7 +1045,7 @@ Project Dots */
 }
 .project-img-caption {
   color: var(--blue900);
-  font-family: "JetBrains Mono";
+  font-family: var(--font-jetbrains-mono);
   font-size: 14px;
   font-style: normal;
   font-weight: 200;
@@ -1108,7 +1084,7 @@ Project Dots */
 }
 .text-block-heading {
   color: var(--blue900);
-  font-family: "Albert Sans";
+  font-family: var(--font-albert-sans), serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -1119,7 +1095,7 @@ Project Dots */
 .text-block-info {
   padding-left: 16px;
   color: var(--blue900);
-  font-family: "Albert Sans";
+  font-family: var(--font-albert-sans), serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -1274,7 +1250,7 @@ CSS Attempt
   font-feature-settings:
     "liga" off,
     "calt" off;
-  font-family: "Albert Sans", serif;
+  font-family: var(--font-albert-sans), serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -1297,7 +1273,7 @@ CSS Attempt
   min-height: 25vh;
 }
 .inquiry-done {
-  font-family: "Albert Sans", serif !important;
+  font-family: var(--font-albert-sans) !important;
   font-weight: 600;
   font-size: 20px;
   text-transform: none;
@@ -1319,7 +1295,7 @@ CSS Attempt
 }
 .review-name {
   color: var(--blue900);
-  font-family: "Albert Sans";
+  font-family: var(--font-albert-sans), serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -1334,7 +1310,7 @@ CSS Attempt
 }
 .review-post {
   color: var(--blue900);
-  font-family: "Albert Sans";
+  font-family: var(--font-albert-sans), serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1348,7 +1324,7 @@ CSS Attempt
 }
 .review-text {
   color: var(--blue900);
-  font-family: "Albert Sans";
+  font-family: var(--font-albert-sans), serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1383,7 +1359,7 @@ CSS Attempt
   color: #4e6cb9;
   text-decoration: underline;
   text-align: center;
-  font-family: "Albert Sans";
+  font-family: var(--font-albert-sans), serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -1531,5 +1507,9 @@ CSS Attempt
   .dot-bottom-right::after {
     right: 4px;
     bottom: -19px;
+  }
+  .written-name {
+    top: -60px;
+    left: 0px;
   }
 }
