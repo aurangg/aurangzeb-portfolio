@@ -1,9 +1,11 @@
 import { createClient } from "@/prismicio";
 import Padding from "../components/Padding";
 import Footer from "../components/footer";
-import CalFunction from "../components/cal";
 import AboutBanner from "./AboutBanner";
 import AboutHobbies from "./AboutHobbies";
+import InnerForm from "../contact/innerform";
+import BasicDot from "../components/BasicDot";
+import VerticalLines from "../components/VerticalLines";
 
 export async function generateMetadata({ about }) {
   return {
@@ -25,12 +27,23 @@ export default async function AboutMain() {
     return { notFound: true }; // This prevents build failure
   }
   return (
-    <main className="position-relative">
-      <Padding spacing={120} border={true} />
+    <main className="position-relative border-adjust">
+      <Padding spacing={40} border={true} />
       <AboutBanner about={about} />
-      <Padding spacing={60} border={true} />
+      <Padding spacing={40} border={true} />
       <AboutHobbies about={about} />
-      <CalFunction />
+      <section className="position-relative">
+        <VerticalLines topLine={true} bottomLine={false} />
+        <div className="container section-sm-padding border-lr position-relative padding-bottom-40">
+          <BasicDot
+            topLeft={true}
+            topRight={true}
+            bottomRight={true}
+            bottomLeft={true}
+          />
+          <InnerForm />
+        </div>
+      </section>
       <Footer />
     </main>
   );

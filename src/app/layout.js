@@ -1,6 +1,5 @@
 import "./globals.css";
 import "./bootstrap-grid.css";
-import Toolbar from "./components/toolbar";
 import NavbarTest from "./components/toolbarTry";
 import { Albert_Sans, JetBrains_Mono } from "next/font/google";
 // import { SpeedInsights } from "@vercel/speed-insights/next";

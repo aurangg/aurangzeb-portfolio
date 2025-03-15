@@ -48,7 +48,7 @@ export default function Middle({ project, slug }) {
             style={{
               backgroundColor: `${project.data.image_background}`,
             }}
-            className="project-image-container detail-img-container"
+            className="project-image-container detail-img-container show-on-desktop"
           >
             <motion.div
               className="thumb-img thumb-detail dis-container"

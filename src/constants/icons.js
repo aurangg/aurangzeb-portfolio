@@ -1246,3 +1246,21 @@ export const ButtonIcon = () => (
     </defs>
   </svg>
 );
+
+export const DownloadIcon = () => (
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M5 16.6663H15M10 3.33301V13.333M10 13.333L12.9167 10.4163M10 13.333L7.08333 10.4163"
+      stroke="#011438"
+      strokeWidth="0.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);

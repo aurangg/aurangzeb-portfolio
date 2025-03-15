@@ -5,7 +5,7 @@ import Padding from "./Padding";
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-chip">
+      {/* <div className="footer-chip">
         Made with Love{" "}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -31,8 +31,14 @@ export default function Footer() {
             </clipPath>
           </defs>
         </svg>
-      </div>
-      <div className="container position-relatve border-lr">
+      </div> */}
+      <div className="container position-relative border-lr">
+        <BasicDot
+          topLeft={true}
+          topRight={true}
+          bottomRight={false}
+          bottomLeft={false}
+        />
         <Padding spacing={40} />
         <div className="row">
           <div className="col-lg-6">

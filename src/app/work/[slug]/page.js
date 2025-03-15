@@ -5,17 +5,19 @@ import Middle from "./projectDetail/middle";
 import Banner from "./banner";
 import { Suspense } from "react";
 import Padding from "@/app/components/Padding";
+import { getMetadata } from "@/lib/metadata";
 
 export async function generateStaticParams() {
   const client = createClient();
-  const projects = await client.getAllByType("projects").catch(() => null);
-  if (!projects) {
-    console.error("No homepage document found in Prismic.");
-    return { notFound: true }; // This prevents build failure
-  }
+  const projects = await client.getAllByType("projects");
+
   return projects.map((project) => ({
-    slug: project.uid, // ✅ Must match the dynamic [slug]
+    slug: project.uid, // This should match how slugs are stored in Prismic
   }));
+}
+
+export async function generateMetadata({ params }) {
+  return await getMetadata("workDetail", { slug: params?.slug });
 }
 
 export default async function ProjectsDetail({ params }) {
@@ -26,9 +28,8 @@ export default async function ProjectsDetail({ params }) {
     console.error("No homepage document found in Prismic.");
     return { notFound: true }; // This prevents build failure
   }
-
   return (
-    <>
+    <main className="position-relative border-adjust">
       <Padding spacing={40} border={true} />
       <Banner project={project} />
       <Padding spacing={40} border={true} />
@@ -37,6 +38,6 @@ export default async function ProjectsDetail({ params }) {
       </Suspense> */}
       {/* <CalFunction /> */}
       <Footer />
-    </>
+    </main>
   );
 }
