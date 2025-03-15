@@ -1,5 +1,8 @@
+import { staticMetadata } from "@/lib/metadata";
 import Footer from "../components/footer";
 import Padding from "../components/Padding";
+
+export const metadata = staticMetadata.resume;
 
 export default function Resume() {
   return (

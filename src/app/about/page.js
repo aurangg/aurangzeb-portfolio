@@ -7,21 +7,13 @@ import InnerForm from "../contact/innerform";
 import BasicDot from "../components/BasicDot";
 import VerticalLines from "../components/VerticalLines";
 
-export async function generateMetadata({ about }) {
-  return {
-    title: about?.data.meta_title || "My Little About",
-    description: about?.data.meta_description || "Default description for SEO.",
-    openGraph: {
-      title: about?.data.meta_title,
-      description: about?.data.meta_description,
-      images: [{ url: about?.data.meta_image?.url || "/default-image.jpg" }],
-    },
-  };
+export async function generateMetadata() {
+  return await getMetadata("about"); // Fetch dynamic metadata from Prismic
 }
+
 export default async function AboutMain() {
   const client = createClient();
   const about = await client.getSingle("about").catch(() => null);
-  generateMetadata(about);
   if (!about) {
     console.error("No homepage document found in Prismic.");
     return { notFound: true }; // This prevents build failure

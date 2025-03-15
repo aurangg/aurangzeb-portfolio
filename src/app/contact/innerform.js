@@ -6,7 +6,8 @@ import SectionHeadingSM from "../components/section_heading_sm";
 import Image from "next/image";
 
 export default function InnerForm() {
-  const contactAPI = process.env.NEXT_PUBLIC_CONTACT_API;
+  // const contactAPI = process.env.NEXT_PUBLIC_CONTACT_API;
+  const contactAPI = "100573f2-0285-41f5-bf33-ccadd0d701c6";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
