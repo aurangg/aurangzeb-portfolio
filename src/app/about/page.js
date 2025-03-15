@@ -6,6 +6,7 @@ import AboutHobbies from "./AboutHobbies";
 import InnerForm from "../contact/innerform";
 import BasicDot from "../components/BasicDot";
 import VerticalLines from "../components/VerticalLines";
+import { getMetadata } from "@/lib/metadata";
 
 export async function generateMetadata() {
   return await getMetadata("about"); // Fetch dynamic metadata from Prismic
