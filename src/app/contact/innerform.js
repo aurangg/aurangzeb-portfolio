@@ -22,30 +22,25 @@ export default function InnerForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
-    setSuccess(null);
-
-    try {
-      const response = await fetch(formURL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-      if (response.ok) {
-        setSuccess("Email sent successfully!");
-        setFormData({ name: "", email: "", message: "" }); // Reset form
-      } else {
-        setSuccess(`Error: ${result.error}`);
-      }
-    } catch (error) {
-      setSuccess("Something went wrong!");
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: process.env.NEXT_PUBLIC_CONTACT_API,
+        name: e.target.name.value,
+        email: e.target.email.value,
+        message: e.target.message.value,
+      }),
+    });
+    const result = await response.json();
+    if (result.success) {
+      setLoading(true);
+      setSuccess("Success");
+      console.log(result);
     }
-
-    setLoading(false);
   };
 
   const reviewData = {
