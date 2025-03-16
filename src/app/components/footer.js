@@ -1,6 +1,7 @@
-import { email, linkedin, twitter } from "@/constants/urls";
+import { email, linkedin, roadmap_page, twitter } from "@/constants/urls";
 import BasicDot from "./BasicDot";
 import Padding from "./Padding";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -88,6 +89,12 @@ export default function Footer() {
               <p className="footer-head-text">
                 © Aurangg 2025. All rights reserved
               </p>
+              <Link
+                href={`/${roadmap_page}`}
+                className="nav-items-text footer-link text-uppercase jetbrains"
+              >
+                Roadmap
+              </Link>
             </div>
           </div>
           <div className="col-lg-6 footer-icons-end">

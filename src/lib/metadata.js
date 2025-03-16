@@ -30,6 +30,11 @@ export const staticMetadata = {
   contact: {
     title: `Let’s Build Something Exceptional | Hire a Senior UI/UX Designer`,
     description: `Great design isn’t just about aesthetics—it’s about results. Whether you need a high-converting landing page, a seamless SaaS dashboard, or a full-scale digital experience, let’s make it happen.`,
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
+      apple: "/apple-touch-icon.png",
+    },
     keywords:
       "contact, support, customer service, get in touch, inquiries, hire a UI/UX designer, freelance UI/UX expert, work with a designer, consultation request, design project inquiry, UI/UX collaboration, design consultation, business inquiries, job opportunities, professional networking, portfolio review, project estimate, quote request, client support, partnership opportunities, UI/UX designer on Upwork, top-rated UI/UX freelancer, best UI/UX designer Pakistan, UI/UX expert Dubai, remote UI/UX freelancer, UI/UX consultant Dubai, UI/UX design services USA, European UI/UX designer, Upwork design specialist, SaaS UI/UX designer, fintech UI/UX consultant, high-rated UI/UX freelancer, hire UI/UX expert near me",
     robots: "index, follow", // Ensures the page is indexed by search engines
@@ -59,6 +64,11 @@ export const staticMetadata = {
     title: `Designing Impactful Experiences | Explore Aurangg’s Resume`,
     description:
       "Beyond aesthetics—designing for results. With 6+ years of experience in SaaS, fintech, and B2B UX, explore how I craft intuitive and high-performing digital products.",
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
+      apple: "/apple-touch-icon.png",
+    },
     keywords:
       "UI/UX resume, UI/UX designer CV, product designer resume, web design CV, mobile app UX resume, creative strategist CV, UX case studies, UI/UX work experience, professional UI/UX portfolio, best UI/UX resumes 2025, Freelance UI/UX, hire a UI/UX designer, Upwork freelancer, top UI/UX designer Upwork, best UI/UX freelancer portfolio, Upwork UI/UX profile, remote UI/UX freelancer, UX consultant experience, hire a UX strategist, SaaS UX expert, fintech UI/UX resume, B2B UX, dashboard UI designer, digital product designer, fintech UX strategist, UI/UX consultant Dubai, UI/UX expert Lahore, UI/UX designer Pakistan, best UI/UX designer Pakistan, UI/UX freelancer USA, European UI/UX designer, Next.js portfolio, user experience specialist, digital product design",
     ...COMMON_METADATA,
@@ -88,7 +98,11 @@ export const staticMetadata = {
   photos: {
     title: `Photos & Visual Storytelling | A Designer’s Perspective`,
     description: `A designer’s perspective isn’t limited to screens—it’s everywhere. Explore my photography: From the breathtaking landscapes of Skardu and Bali to the vibrant streets of Bangkok and Jakarta. Capturing moments of stillness, movement, and meaning—whether it’s sunsets over the ocean, portraits with raw emotions, or the symmetry of bikes and cars. Shot on iPhone, because great photography isn’t about the gear, it’s about the vision. 🎨`,
-
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
+      apple: "/apple-touch-icon.png",
+    },
     keywords:
       "photography portfolio, designer photography, visual storytelling, Skardu photography, Hunza photography, Thailand photography, Bangkok photography, Koh Samui photography, Bali photography, Ubud photography, Indonesia travel photography, car photography, bike photography, motorcycle photography, sunset photography, ocean photography, creative portraits, artistic photography, deep meaning photography, minimalist photography, UI/UX designer photography, aesthetic photography, iPhone photography, Shot on iPhone, urban photography, nature photography, landscape photography, color theory in photography, light and shadow play, black and white photography, storytelling through photos, photography for designers, composition in photography, travel photography, professional mobile photography, photography inspiration, best mobile photography, cinematic photography, high-quality travel shots, best travel photographer",
 
@@ -119,7 +133,11 @@ export const staticMetadata = {
   work: {
     title: `Work | UI/UX Designs That Convert – Dashboards, SaaS, Web & Mobile`,
     description: `Real Impact, Real Results – A portfolio of UI/UX designs that drive conversions, enhance user engagement, and scale businesses. From enterprise SaaS to mobile apps, explore case studies and high-performance designs.`,
-
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
+      apple: "/apple-touch-icon.png",
+    },
     keywords:
       "UI/UX projects portfolio, senior UI/UX designer work, freelance UI/UX case studies, SaaS product designer, B2B UX expert, fintech UI/UX case studies, mobile app UX portfolio, dashboard UI projects, enterprise software UX, e-commerce UI/UX consultant, digital experience design, Upwork UI/UX work samples, scalable UI/UX solutions, Fintech UI/UX, banking platform UX, healthcare SaaS dashboard, logistics platform UI, AI & ML product design, SaaS UI/UX consultant, B2B web application design, enterprise software UX, mobile-first product UX, digital banking UI/UX, food delivery platform UI, government & corporate UX, e-commerce & marketplace UI/UX, startup UX consultant, high-growth SaaS UX solutions, User interface design, interactive UI/UX prototypes, wireframing & UX flows, usability testing & research, conversion-optimized UI, UX case studies with impact, high-converting digital experiences, product design from concept to launch, scalable design systems, accessibility-focused UI, customer-centric UX design, responsive web applications, mobile app UI/UX portfolio, AI-powered UX strategies, business-driven UX solutions, frictionless user journeys, increasing conversions by 35%, improving engagement rates, reducing churn through UX, data-driven UI solutions, optimizing SaaS retention, simplifying complex user flows, enterprise UX strategies, UX design that boosts revenue, reducing workflow inefficiencies by 40%, UI/UX solutions for business growth, data-backed UX improvements, Lahore-based UI/UX expert, best UI/UX designer in Pakistan, top UI/UX consultant for SaaS, hire a UI/UX designer in Lahore, Pakistan-based product designer, digital product strategist in Lahore, global UI/UX expert from Pakistan, Upwork UI/UX portfolio, best UI/UX designer for hire, top-rated UI/UX freelancer, SaaS UI/UX consultant for hire, hire an expert UI/UX strategist, digital product design consultant, UI/UX expert for startups, UI/UX consultant for enterprise projects, hire a remote UI/UX freelancer",
     ...COMMON_METADATA,
@@ -362,6 +380,11 @@ async function getDynamicMetadata(page, params = {}) {
       description:
         document?.data.meta_description ||
         `🚀 Your UI/UX Secret Weapon: Turning Clicks into Conversions. You have seconds to capture attention. If your UI/UX isn't intuitive, users leave. That’s where I come in. I design high-converting, user-friendly interfaces that make navigation effortless and engagement seamless. With 6+ years of experience & $40K+ in Upwork earnings, I’ve helped businesses like Government of Dubai, Kruzee, Merch, and others create digital experiences that drive results.`,
+      icons: {
+        icon: "/favicon.ico",
+        shortcut: "/favicon.ico",
+        apple: "/apple-touch-icon.png",
+      },
       keywords,
       ...COMMON_METADATA,
       openGraph: {

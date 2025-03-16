@@ -938,6 +938,10 @@ Project Dots */
   height: 100%;
   transition: 0.3s;
 }
+.spotify-link {
+  width: 80%;
+  margin-top: 32px;
+}
 .gallery-image:hover {
   transform: scale(1.05);
 }
@@ -1538,6 +1542,207 @@ CSS Attempt
   padding-left: 0px;
   padding-right: 0px;
 }
+.resume-box {
+  border-radius: 24px;
+  border: 1px solid var(--base-border);
+  background-color: var(--white);
+  padding: 24px;
+  position: relative;
+}
+.resume-box-flex {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 24px;
+}
+.resume-name-box {
+  display: flex;
+  flex-direction: column;
+}
+.resume-name {
+  font-family: var(--font-albert-sans), serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  margin-bottom: 4px;
+  color: var(--blue900);
+  font-style: normal;
+  letter-spacing: -1.6px;
+  text-align: left;
+}
+.resume-title {
+  color: var(--blue900);
+  text-align: left;
+  font-family: var(--font-jetbrains-mono), serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: -0.36px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+.resume-name-box-location {
+  font-family: var(--font-albert-sans), serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--blue900);
+  font-style: normal;
+  letter-spacing: -0.3px;
+  text-align: left;
+  opacity: 0.5;
+}
+.resume-property-text {
+  color: var(--blue900);
+  text-align: left;
+  font-family: var(--font-jetbrains-mono), serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: -0.36px;
+  text-transform: uppercase;
+  opacity: 1;
+  margin-bottom: 24px;
+}
+.resume-text {
+  color: var(--blue900);
+  text-align: left;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 28px;
+  letter-spacing: -0.36px;
+}
+.jetbrains {
+  font-family: var(--font-jetbrains-mono);
+}
+.albert {
+  font-family: var(--font-albert-sans);
+}
+.font-weight-300 {
+  font-weight: 300;
+}
+.font-weight-400 {
+  font-weight: 400;
+}
+.font-weight-500 {
+  font-weight: 500;
+}
+.font-weight-600 {
+  font-weight: 600;
+}
+.font-weight-700 {
+  font-weight: 700;
+}
+.opacity-05 {
+  opacity: 0.5;
+}
+.opacity-06 {
+  opacity: 0.6;
+}
+.opacity-07 {
+  opacity: 0.7;
+}
+.opacity-08 {
+  opacity: 0.8;
+}
+
+.role {
+  letter-spacing: -1px !important;
+  font-size: 20px !important;
+  line-height: 24px !important;
+  transition: 0.3s;
+}
+.role:hover {
+  text-decoration: underline;
+}
+.tagline {
+  color: var(--blue900);
+  text-align: left;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: -0.36px;
+  margin-top: 8px;
+  opacity: 0.6;
+  width: 80%;
+}
+.location {
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: -0.36px;
+  margin-top: 8px;
+}
+.resume-property-title {
+  color: var(--blue900);
+  text-align: left;
+  font-family: var(--font-albert-sans), serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.36px;
+}
+.resume-box-body {
+  width: 100%;
+  padding: 24px 0px;
+  display: flex;
+  gap: 16px;
+}
+.resume-header {
+  width: 25%;
+}
+.resume-body {
+  width: 75%;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.contributions-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 24px;
+}
+.contributions {
+  font-size: 16px !important;
+  list-style: none;
+}
+.contributions-list {
+  display: flex;
+  gap: 8px;
+}
+.skills-box {
+  margin-top: 24px;
+}
+.skills-text {
+  font-size: 13px !important;
+  line-height: 18px !important;
+  opacity: 1 !important;
+}
+.roadmap-column {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+.footer-link {
+  text-align: left;
+  text-decoration: underline;
+  margin-top: 8px;
+}
+.roadmap-item {
+  border-radius: 12px;
+  border: 1px solid var(--base-border);
+  background-color: var(--white);
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex-direction: column;
+}
 @media (max-width: 786px) {
   .navbar {
     bottom: 0px;
@@ -1576,6 +1781,9 @@ CSS Attempt
   .contact-row {
     gap: 16px;
     flex-direction: column-reverse;
+  }
+  .resume-box-flex {
+    flex-direction: column;
   }
 }
 
@@ -1718,5 +1926,35 @@ CSS Attempt
   }
   .photos-banner {
     flex-direction: column;
+  }
+  .spotify-link {
+    width: 100%;
+  }
+  .resume-name {
+    font-size: 32px;
+  }
+  .resume-header,
+  .resume-body {
+    width: 100%;
+  }
+  .resume-box-body {
+    flex-direction: column;
+    padding: 16px 0px;
+    gap: 4px;
+  }
+  .contributions {
+    list-style: none;
+  }
+  .resume-property-text {
+    margin-bottom: 16px;
+  }
+  .contributions-box {
+    margin-top: 16px;
+  }
+  .resume-box {
+    padding: 24px 24px 8px 24px;
+  }
+  .footer-link {
+    text-align: center;
   }
 }
