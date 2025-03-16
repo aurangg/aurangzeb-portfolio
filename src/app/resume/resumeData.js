@@ -221,8 +221,8 @@ export default function ResumeData() {
         >
           <p className="resume-property-text">Education</p>
           {data.education.map((i, index) => (
-            <div className="resume-box-body">
-              <div key={index} className="resume-header">
+            <div className="resume-box-body" key={index}>
+              <div className="resume-header">
                 <p className="albert resume-text font-weight-400 opacity-05">
                   {i.year}
                 </p>
