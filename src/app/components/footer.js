@@ -100,7 +100,6 @@ export default function Footer() {
           <div className="col-lg-6 footer-icons-end">
             <div className="footer-bottom">
               <a href={`${twitter}`} target="_blank" className="tool-tip">
-                <div className="tool-tip-after">X</div>
                 <svg
                   width="24"
                   height="25"
@@ -127,7 +126,6 @@ export default function Footer() {
                 </svg>
               </a>
               <a href={`${linkedin}`} target="_blank" className="tool-tip">
-                <div className="tool-tip-after">LinkedIn</div>
                 <svg
                   width="24"
                   height="25"
@@ -142,7 +140,6 @@ export default function Footer() {
                 </svg>
               </a>
               <a href={`mailTo:${email}`} target="_blank" className="tool-tip">
-                <div className="tool-tip-after">Email</div>
                 <svg
                   width="24"
                   height="25"

@@ -1871,8 +1871,8 @@ CSS Attempt
   .section-heading {
     font-size: 32px;
   }
-  .cal-inline-container {
-    width: 90% !important;
+  .row-mobile {
+    gap: 32px;
   }
   .footer-icons-end {
     justify-content: center;

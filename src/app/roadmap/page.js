@@ -22,7 +22,7 @@ export default function Roadmap() {
               <h1 className="banner-title">Roadmaps</h1>
             </div>
           </div>
-          <div className="row" style={{ marginTop: "32px" }}>
+          <div className="row row-mobile" style={{ marginTop: "32px" }}>
             <div className="col-lg-4">
               <h2 className="role thumb-title" style={{ marginBottom: "16px" }}>
                 Upcoming

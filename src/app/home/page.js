@@ -6,6 +6,7 @@ import Padding from "../components/Padding";
 import InnerForm from "../contact/innerform";
 import VerticalLines from "../components/VerticalLines";
 import BasicDot from "../components/BasicDot";
+import CalFunction from "../components/cal";
 
 export default async function HomePage() {
   const client = createClient();
@@ -28,6 +29,7 @@ export default async function HomePage() {
           <InnerForm />
         </div>
       </section>
+      <CalFunction />
       <Footer />
       {/* <Coming /> */}
     </main>
