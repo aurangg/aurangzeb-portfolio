@@ -2,8 +2,10 @@ import "./globals.css";
 import "./bootstrap-grid.css";
 import NavbarTest from "./components/toolbarTry";
 import { Albert_Sans, JetBrains_Mono } from "next/font/google";
-// import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { ThemeProvider } from "./context/ThemeContext";
+import { Analytics } from "@vercel/analytics/next";
 
 export const albert_sans = Albert_Sans({
   subsets: ["latin"],
@@ -21,9 +23,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${albert_sans.variable} ${jetbrains_mono.variable}`}>
+        {/* <ThemeProvider> */}
         <NavbarTest />
         {children}
-        {/* <SpeedInsights /> */}
+        <Analytics />
+        <SpeedInsights />
+        {/* </ThemeProvider> */}
       </body>
       <GoogleAnalytics gaID="G-Z4SX9XDB1T" />
     </html>

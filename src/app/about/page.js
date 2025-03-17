@@ -23,7 +23,6 @@ export default async function AboutMain() {
     <main className="position-relative border-adjust">
       <Padding spacing={40} border={true} />
       <AboutBanner about={about} />
-      <Padding spacing={40} border={true} />
       <AboutHobbies about={about} />
       <section className="position-relative">
         <VerticalLines topLine={true} bottomLine={false} />

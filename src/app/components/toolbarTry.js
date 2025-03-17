@@ -20,6 +20,7 @@ import {
   NavbarPhotos,
   NavbarWork,
 } from "@/constants/icons";
+// import ThemeToggle from "./themeToggle";
 
 const navLinks = [
   { href: home_page_url, label: "Home", icon: <NavbarHome /> },
@@ -111,6 +112,7 @@ export default function NavbarTest() {
             </motion.span>
           </Link>
         ))}
+        {/* <ThemeToggle /> */}
         <Link href={`/${contact_page}`} className={`project-btn navbar-btn`}>
           Get in touch
         </Link>

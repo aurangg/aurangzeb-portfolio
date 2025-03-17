@@ -7,8 +7,12 @@
   --white: #fff;
   --base-border: #d1dbf5;
   --skeleton: #e6edfd;
+  --stroke: #d0dbe7;
 }
-
+[data-theme="dark"] {
+  --background-color: #08090a;
+  --text-color: #f7f8f8;
+}
 html,
 body {
   max-width: 100vw;
@@ -60,7 +64,7 @@ p {
 }
 .loading-box {
   border-radius: 24px;
-  border: 1px solid #d0dbe7;
+  border: 1px solid var(--stroke);
   background: var(--white);
   padding-top: 40px;
   display: flex;
@@ -528,7 +532,7 @@ Project Dots */
   padding: 8px 16px;
   border-radius: 25px;
   border: 1px solid var(--Stroke-1, #e3e3e3);
-  background: var(--White, #fff);
+  background: var(--white);
   width: max-content;
   margin-bottom: 16px;
 }
@@ -939,8 +943,7 @@ Project Dots */
   transition: 0.3s;
 }
 .spotify-link {
-  width: 80%;
-  margin-top: 32px;
+  margin-top: 0px;
 }
 .gallery-image:hover {
   transform: scale(1.05);
@@ -1056,7 +1059,7 @@ Project Dots */
 }
 .heading-area {
   margin-bottom: 32px;
-  margin-top: 64px;
+  margin-top: 24px;
 }
 .cal-section {
   border-radius: 40px;
@@ -1742,6 +1745,12 @@ CSS Attempt
   align-items: flex-start;
   gap: 8px;
   flex-direction: column;
+}
+.toggle-space {
+  background-color: var(--background);
+  border: 1px solid var(--stroke);
+  padding: 2px;
+  border-radius: 3px;
 }
 @media (max-width: 786px) {
   .navbar {
